@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'England';
+      src: url('england.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'CK';
+      src: url('CK_tc04160000125.ttf') format('truetype');
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #f8f9fa;
+      padding: 10px;
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .tab {
+      margin: 0 20px;
+      font-size: 30px;
+    }
+    .container {
+      width: 90%
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-family: 'England', Arial, sans-serif; /* 폰트 적용 */
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-family: 'CK', Arial, sans-serif; /* 폰트 적용 */
+    }
+    .slider{
+        max-width: 400px;
+        height: 480px;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
+    }
+    .slider input[type=radio]{
+        display: none;
+    }
+
+ul.imgs{
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+}
+ul.imgs li{
+    position: absolute;
+    left: 640px;
+    transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+
+    padding: 0;
+    margin: 0;
+}
+
+.bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+
+    .btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .wedding-photo {
+      display: block;
+      margin: 0 auto;
+      width: 70%; /* 수정: 사진 크기 조절 */
+      max-width: 400px;
+      border-radius: 50%; /* 수정: 타원형 테두리 */
+      border: 5px solid #fff; /* 수정: 테두리 스타일 및 색상 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 추가: 그림자 효과 */
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tab" style="font-family: 'CK', Arial, sans-serif;"><a href="#main">초대글</a></div>
+  <div class="tab" style="font-family: 'CK', Arial, sans-serif;"><a href="#photo">동수♥명미</a></div>
+  <div class="tab" style="font-family: 'CK', Arial, sans-serif;"><a href="#directions">오시는 길</a></div>
+  <div class="tab" style="font-family: 'CK', Arial, sans-serif;"><a href="#contact">연락처</a></div>
+</div>
+
+<div class="container" id="main">
+  <h1>Wedding Invitation</h1>
+  <img src="wedding_photo.jpg" alt="결혼식 사진" class="wedding-photo">
+  <p><span style="font-family: 'CK', Arial, sans-serif;">저희가 결혼식을 올립니다.</span></p>
+  <p>날짜는 2024년 9월 28일이고, 장소는 루이비스 문정입니다.</p>
+  <p>예식장 위치: 서울 송파구 법원로9길 26 H 비지니스파크 D 동 B1층</p>
+  <a href="#directions" class="btn">예식장 위치 확인</a>
+</div>
+
+<div class="container" id="photo">
+    <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <ul id="imgholder" class="imgs">
+           <li><img src="1.jpg"></li>
+           <li><img src="2.jpg"></li>
+           <li><img src="3.jpg"></li>
+        </ul>
+        <div class="bullets">
+           <label for="slide1">&nbsp;</label>
+           <label for="slide2">&nbsp;</label>
+           <label for="slide3">&nbsp;</label>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="directions">
+  <h2>오시는 길</h2>
+  <img src="http://lvconvention.co.kr/img/sub01/con02.jpg" alt="예식장 지도">
+</div>
+
+<div class="container" id="contact">
+  <h2>연락처</h2>
+  <p><span style="font-family: 'CK', Arial, sans-serif;">신랑 경동수</span></p>
+  <p>전화번호: 010-2275-9422</p>
+  <p>이메일: kds9422@gmail.com</p>
+  <p>계좌번호: 123-456-78901234 (예금주: 경동수)</p>
+  <p><span style="font-family: 'CK', Arial, sans-serif;">신부 이명미</span></p>
+  <p>전화번호: 010-4451-8765</p>
+  <p>이메일: kds9422@gmail.com</p>
+  <p>계좌번호: 123-456-78901234 (예금주: 이명미)</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.5.4/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+});
+document.querySelectorAll('.tab a').forEach(function(tab) {
+  tab.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = this.getAttribute('href').substring(1);
+    document.querySelectorAll('.container').forEach(function(container) {
+      container.style.display = 'none';
+    });
+    document.getElementById(target).style.display = 'block';
+  });
+});
+</script>
+
+</body>
+</html>
