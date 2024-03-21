@@ -128,7 +128,8 @@
       images[currentIndex].style.display = 'none';
       currentIndex = (currentIndex + 1) % images.length;
       images[currentIndex].style.display = 'block';
-    }
+   }
+   setInterval(showNextImage, 5000); // 5초마다 이미지 전환
 
     // 처음에 첫 번째 이미지만 보이도록 설정
     for (let i = 1; i < images.length; i++) {
