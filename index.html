@@ -60,70 +60,70 @@
     .slider input[type=radio]{
         display: none;
     }
-
-ul.imgs{
-    padding: 0;
-    margin: 0;
-    list-style: none;    
-}
-ul.imgs li{
-    position: absolute;
-    left: 640px;
-    transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
-
-    padding: 0;
-    margin: 0;
-}
-
-.bullets{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    z-index: 2;
-}
-.bullets label{
-    display: inline-block;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.55);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
-.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
-    background-color: #fff;
-}
-
-.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
-.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
-.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
-.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
+    
+    ul.imgs{
+        padding: 0;
+        margin: 0;
+        list-style: none;    
+    }
+    ul.imgs li{
+        position: absolute;
+        left: 640px;
+        transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+    
+        padding: 0;
+        margin: 0;
+    }
+    
+    .bullets{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        z-index: 2;
+    }
+    .bullets label{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.55);
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    /* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+    .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+        background-color: #fff;
+    }
+    .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+        background-color: #fff;
+    }
+    .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+        background-color: #fff;
+    }
+    .slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+        background-color: #fff;
+    }
+    
+    .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+        left: 0;
+        transition: 0.5s;
+        z-index:1;
+    }
+    .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+        left: 0;
+        transition: 0.5s;
+        z-index:1;
+    }
+    .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+        left: 0;
+        transition: 0.5s;
+        z-index:1;
+    }
+    .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+        left: 0;
+        transition: 0.5s;
+        z-index:1;
+    }
 
     .btn {
       display: block;
@@ -197,12 +197,12 @@ ul.imgs li{
 <div class="container" id="contact">
   <h2>연락처</h2>
   <p><span style="font-family: 'CK', Arial, sans-serif;">신랑 경동수</span></p>
-  <p>전화번호: 010-2275-9422</p>
-  <p>이메일: kds9422@gmail.com</p>
+  <p>전화번호: 010-1234-5678</p>
+  <p>이메일: kds@gmail.com</p>
   <p>계좌번호: 123-456-78901234 (예금주: 경동수)</p>
   <p><span style="font-family: 'CK', Arial, sans-serif;">신부 이명미</span></p>
-  <p>전화번호: 010-4451-8765</p>
-  <p>이메일: kds9422@gmail.com</p>
+  <p>전화번호: 010-1234-5678</p>
+  <p>이메일: kds@gmail.com</p>
   <p>계좌번호: 123-456-78901234 (예금주: 이명미)</p>
 </div>
 
